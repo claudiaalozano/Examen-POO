@@ -1,7 +1,7 @@
 import random
 class cuenta_bancaria:
     def retirar_dinero (self,saldo):
-        id = random.choice(lista)
+        id = random.choice(lista) 
         self.retirar = saldo - 78
         print("Ha retirado 78 €, el dinero de su cuenta desciende a 9922€ .")
     def ingresar_dinero (self,saldo):
@@ -12,10 +12,13 @@ class cuenta_bancaria:
         id1= random.choice(lista)
         id2= random.choice(lista)
         
-        if id1 != id2 :
-            quitar =  saldo - 1000
-            transferir = saldo + 1000
-            print ("Usted ha retirado de la cuenta " , id1 , "1000€, por lo que el saldo desciende a ", quitar , " y han sido transferidos a la cuenta " , id2 , " y su saldo asciende a " , transferir)
+        while True:
+            if id1 != id2 :
+                quitar =  saldo - 1000
+                transferir = saldo + 1000
+                print ("Usted ha retirado de la cuenta " , id1 , "1000€, por lo que el saldo desciende a ", quitar , " y han sido transferidos a la cuenta " , id2 , " y su saldo asciende a " , transferir)
+            else:
+                break
         
 
 
