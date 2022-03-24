@@ -1,13 +1,21 @@
 import random
 class cuenta_bancaria:
+    def datos (self, fecha_apertura1 , fecha_apertura2 , fecha_vencimiento2 , fecha_vencimiento1 , nombre):
+        while True:
+            if fecha_apertura2> fecha_vencimiento2:
+                fecha_apertura2 = fecha_vencimiento2
+                fecha_vencimiento2 = fecha_apertura2
+            else:
+                break
+        self.datos1 = print("Rubén su fecha de apertura es (" , fecha_apertura1 , "/" , fecha_apertura2 , ") y su fecha de vencimiento es (" , fecha_vencimiento1 , "," , fecha_vencimiento2 , ").")
     def retirar_dinero (self,saldo):
         id = random.choice(lista) 
         self.retirar = saldo - 78
-        print("Ha retirado 78 €, el dinero de su cuenta desciende a 9922€ .")
+        print("Ha retirado 78 €, de su cuenta",  id , " ,el dinero desciende a 9922€ .")
     def ingresar_dinero (self,saldo):
         id = random.choice(lista)
         self.ingreso = saldo + 575
-        print("ha realizado un ingreso de 575€, el saldo de su cuenta asciende a 10575€")
+        print("ha realizado un ingreso de 575€, de su cuenta",  id , " , el saldo asciende a 10575€")
     def transferencia(self, saldo):
         id1= random.choice(lista)
         id2= random.choice(lista)
@@ -20,9 +28,7 @@ class cuenta_bancaria:
             else:
                 break
         
-
-
-
+        
 
 
 
@@ -37,10 +43,4 @@ fecha_apertura2 = random.randint (1, 12)
 fecha_vencimiento1 = random.randint(1, 31)
 fecha_vencimiento2 = random.randint (1, 12)
 
-while True:
-    if fecha_apertura2> fecha_vencimiento2:
-        fecha_apertura2 = fecha_vencimiento2
-        fecha_vencimiento2 = fecha_apertura2
-    else:
-        break
 
