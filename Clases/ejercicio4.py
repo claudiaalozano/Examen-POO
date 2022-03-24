@@ -31,3 +31,16 @@ id_1= random.randint(100000000000,999999999999)
 id_2= random.randint(100000000000,999999999999)
 id_3= random.randint(100000000000,999999999999)
 lista = [id_1 , id_2 , id_3]
+nombre = "Rubén"
+fecha_apertura1 = random.randint (1, 31)
+fecha_apertura2 = random.randint (1, 12)
+fecha_vencimiento1 = random.randint(1, 31)
+fecha_vencimiento2 = random.randint (1, 12)
+
+while True:
+    if fecha_apertura2> fecha_vencimiento2:
+        fecha_apertura2 = fecha_vencimiento2
+        fecha_vencimiento2 = fecha_apertura2
+    else:
+        break
+
